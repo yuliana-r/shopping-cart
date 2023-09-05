@@ -7,4 +7,4 @@
 
 ## Media & assets credits:
 
-1. Flaticon (Freepik): https://www.flaticon.com/free-icons/shopping-bag
+1. Flaticon (kosonicon): https://www.flaticon.com/free-icons/shopping-bag
