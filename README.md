@@ -1,8 +1,10 @@
-# React + Vite
+# Shopping Cart App
+## Introduction 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview
 
-Currently, two official plugins are available:
+<!-- [![Shopping Cart App](./src/assets/demo.png)](https://shopping-cart-yuliana-r.netlify.app/) -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Media & assets credits:
+
+1. Flaticon (Freepik): https://www.flaticon.com/free-icons/shopping-bag
