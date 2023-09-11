@@ -1,6 +1,11 @@
+import Nav from './Nav';
+
 function Cart() {
   return (
-    <h1>Cart page!</h1>
+    <>
+      <Nav></Nav>
+      <h1>Cart page!</h1>
+    </>
   )
 }
   

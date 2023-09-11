@@ -1,6 +1,11 @@
+import Nav from './Nav';
+
 function Shop() {
   return (
-    <h1>Shop page!</h1>
+    <>
+      <Nav></Nav>
+      <h1>Shop page!</h1>
+    </>
   )
 }
 
