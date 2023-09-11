@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import '../styles/Nav.css';
 
 function Nav() {
   const LINKS = [
@@ -22,10 +21,10 @@ function Nav() {
   ]
 
   return(
-    <nav>
+    <nav className='flex gap-4'>
       {LINKS.map((link) => {
         return(
-          <li key={link.id}>
+          <li key={link.id} className='list-none'>
             <Link name={link.name} to={link.to}>{link.name}</Link>
           </li>
         )
