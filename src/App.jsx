@@ -3,7 +3,7 @@ import './styles/index.css';
 function App() {
   return (
     <>
-      Shopping Cart Project
+      <h1>Home page!</h1>
     </>
   )
 }
