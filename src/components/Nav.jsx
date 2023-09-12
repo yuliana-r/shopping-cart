@@ -6,22 +6,22 @@ function Nav() {
     {
       id: 0,
       to: '/',
-      name: 'Home',
+      name: 'HOME',
     },
     {
       id: 1,
       to: '/shop',
-      name: 'Shop'
+      name: 'SHOP'
     },
     {
       id: 2,
       to: '/cart',
-      name: 'Cart'
+      name: 'CART'
     }
   ]
 
   return(
-    <nav className='flex gap-4'>
+    <nav className='flex gap-20'>
       {LINKS.map((link) => {
         return(
           <li key={link.id} className='list-none'>

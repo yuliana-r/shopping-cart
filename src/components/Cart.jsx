@@ -1,10 +1,12 @@
-import Nav from './Nav';
+import Header from "./Header";
+import Footer from "./Footer";
 
 function Cart() {
   return (
     <>
-      <Nav></Nav>
-      <h1>Cart page!</h1>
+    <Header />
+    <h1>Cart page!</h1>
+    <Footer />
     </>
   )
 }

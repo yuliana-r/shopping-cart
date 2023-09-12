@@ -1,14 +1,14 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-function Shop() {
-  return (
-    <>
+function Home() {
+    return(
+        <>
         <Header />
-        <h1>Shop page!</h1>
+        <h1>Home page!</h1>
         <Footer />
         </>
-  )
+    )
 }
 
-export default Shop;
+export default Home;
