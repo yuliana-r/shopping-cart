@@ -6,7 +6,7 @@ import tiktok from '../assets/tiktok.png';
 
 function Footer() {
   return(
-    <footer className="flex flex-col items-center justify-between w-full bg-navy-700 h-fit font-display text-silver-200">
+    <footer className="flex flex-col items-center justify-between w-full border-t-2 border-solid bg-navy-700 h-fit font-display text-silver-200 border-navy-500">
         <div className="flex flex-row flex-wrap items-start justify-center gap-8 pt-8 pb-2 ">
           <div className="m-4 w-52">
             <h4 className="mb-4 font-bold tracking-wider">COMPANY</h4>
@@ -43,7 +43,6 @@ function Footer() {
               <a href=""><img src={gmail} alt="gmail logo" className="h-7 hover:scale-110 hover:saturate-150" /></a>
             </div>
           </div>
-
 
         </div>
         <div className="flex flex-row items-center justify-center gap-2 m-1.5 text-lg font-medium font-display">
