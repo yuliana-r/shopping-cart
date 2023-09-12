@@ -8,3 +8,13 @@
 ## Media & assets credits:
 
 1. Flaticon (kosonicon): https://www.flaticon.com/free-icons/shopping-bag
+
+2. Flaticon (Pixel perfect): https://www.flaticon.com/free-icons/instagram-logo
+
+3. Flaticon (Pixel perfect): https://www.flaticon.com/free-icons/facebook
+
+4. Flaticon (Rakib Hassan Rahim): https://www.flaticon.com/free-icons/youtube
+
+5. Flaticon (Freepik): https://www.flaticon.com/free-icons/gmail
+
+6. Flaticon (Ruslan Babkin): https://www.flaticon.com/free-icons/tiktok
