@@ -9,7 +9,7 @@ function Product({ product }) {
         </div>
         <p className='p-2 mt-2 overflow-hidden font-bold tracking-wide h-14 text-navy-900 line-clamp-2'>{product.title}</p>
         <div>
-          <p className='m-2 text-base hover:cursor-grab'><i className="text-yellow-400 fa-solid fa-star"></i> <span className='font-medium'>{product.rating.rate}</span> <span className='font-light'>({product.rating.count} reviews)</span></p>
+          <p className='m-2 text-base hover:cursor-grab'><i className="text-yellow-400 fa-solid fa-star"></i> <span className='font-semibold'>{product.rating.rate}</span> <span className='font-thin'>({product.rating.count} reviews)</span></p>
           <p className='mt-3 text-lg font-bold tracking-wider text-black-900'>£{product.price}</p>
         </div>
       </div>

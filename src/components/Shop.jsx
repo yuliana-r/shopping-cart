@@ -46,7 +46,8 @@ function Shop() {
   return (
     <>
       <Header />
-      <div className='flex flex-col items-center justify-center w-3/4 sm:justify-between'>
+      <div className='flex flex-col items-center justify-center w-3/4 text-center sm:justify-between'>
+        <p className='mx-auto mt-6 text-4xl tracking-wide select-none text-silver-800 font-motto'>more products coming soon...</p>
         <div className="flex flex-row flex-wrap items-center justify-center gap-2 mt-6 ml-0 sm:ml-auto sm:w-full sm:mr-5 sm:justify-end font-display">
           <p className='text-base font-bold text-yellow-500'>Category:</p>
           <div>
@@ -67,9 +68,9 @@ function Shop() {
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center gap-4 m-5 sm:justify-between sm:w-full">
           {error ? (
-            <p className='m-auto'>A network error has occured...</p>
+            <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>a network error has occured...</p>
           ) : loading ? (
-            <p className='m-auto'>Loading...</p>
+            <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>loading...</p>
           ) : (
             filteredProducts.map((product) => (
               <Product key={product.id} product={product} />
