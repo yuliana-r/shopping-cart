@@ -1,12 +1,12 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from './Header';
+import Footer from './Footer';
 
 function Cart() {
   return (
     <>
-    <Header />
-    <h1>Cart page!</h1>
-    <Footer />
+      <Header />
+      <h1>Cart page!</h1>
+      <Footer />
     </>
   )
 }
