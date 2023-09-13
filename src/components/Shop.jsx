@@ -26,20 +26,23 @@ function Shop() {
   return (
     <>
       <Header />
-      {error ? (
-        <p>A network error was encountered</p>
-      ) : (
-        loading ? (
-          <p>Loading...</p>
+      <div className='flex flex-row flex-wrap items-center justify-center w-4/5 m-5 font-display'>
+        {error ? (
+          <p>A network error was encountered</p>
         ) : (
-          productsJSON.map((product) => (
-            <Product
-              key={product.id}
-              product={product} 
-            />
-          ))
-        )
-      )}
+          loading ? (
+            <p>Loading...</p>
+          ) : (
+            productsJSON.map((product) => (
+              <Product
+                key={product.id}
+                product={product} 
+              />
+            ))
+          )
+        )}
+      </div>
+      
       <Footer />
     </>
   )
