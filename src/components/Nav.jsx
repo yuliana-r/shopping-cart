@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -25,7 +24,7 @@ function Nav() {
     <nav className='flex gap-20'>
       {LINKS.map((link) => {
         return(
-          <li key={link.id} className='m-2 font-extrabold tracking-wider list-none font-display text-silver-900'>
+          <li key={link.id} className='m-2 text-base font-extrabold tracking-wider list-none font-display text-silver-900'>
             <NavLink name={link.name} to={link.to} className={({isActive}) => isActive ? 'text-navy-500 border-b-2' : ''}>{link.name}</NavLink>
           </li>
         )
