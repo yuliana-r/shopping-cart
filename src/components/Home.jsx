@@ -10,7 +10,7 @@ function Home() {
       <div className="flex flex-col items-center justify-center w-full m-2 text-lg leading-7 text-justify select-none h-fit font-display bg-silver-50 text-black-950">
         <div className="flex flex-row flex-wrap items-center justify-center w-7/12 m-6 xl:flex-nowrap">
           <p className="m-4">
-                At <span className="font-bold text-navy-500">shop &apos;n&apos; roll</span>, we&apos;ve 
+                At <span className="font-extrabold text-navy-500">shop &apos;n&apos; roll</span>, we&apos;ve 
                 crafted a unique online shopping experience that 
                 combines the <span className="text-3xl font-semibold tracking-wide text-yellow-500 font-motto">joy</span> of strolling through your favorite stores with the convenience 
                 of online shopping.
@@ -20,7 +20,7 @@ function Home() {
 
         <div className="flex flex-row items-center justify-center w-7/12 m-8">
           <p className="m-4">
-                We prioritize your shopping experience, making it as <span className="text-3xl font-semibold tracking-wide font-motto text-navy-500">enjoyable</span> and stress-free 
+                We prioritize your shopping experience, making it as enjoyable and <span className="text-3xl font-semibold tracking-wide font-motto text-navy-500">stress-free </span> 
                 as possible. Our user-friendly website is designed to be easy to navigate, allowing you to 
                 effortlessly find the items you desire. Plus, our <span className="text-3xl font-semibold tracking-wide text-yellow-500 font-motto">dedicated</span> customer support team is always 
                 ready to assist you with any questions or concerns you may have. 

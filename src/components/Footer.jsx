@@ -45,11 +45,11 @@ function Footer() {
         </div>
 
       </div>
-      <div className="flex flex-row items-center justify-center gap-2 m-1.5 text-lg font-medium font-display">
+      <div className="flex flex-row items-center justify-center gap-2 mb-1.5 text-lg font-medium font-display">
         <a href="https://github.com/yuliana-r/shopping-cart" target="_blank" rel="noreferrer" 
           aria-label='project repository'>
-          <i className="transition-transform fab fa-github hover:rotate-[360deg] hover:scale-125">
-          </i></a><p>yuliana-r</p>
+          <i className="transition-transform fab text-xl fa-github hover:rotate-[360deg] hover:scale-125">
+          </i></a><p className='mb-2 text-4xl select-none font-motto'>yuliana-r</p>
       </div>
     </footer>
   )
