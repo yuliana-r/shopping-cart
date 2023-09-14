@@ -68,7 +68,7 @@ function Shop() {
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center gap-4 m-5 sm:justify-between sm:w-full">
           {error ? (
-            <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>a network error has occured...</p>
+            <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>a network error has occured... please try again!</p>
           ) : loading ? (
             <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>loading...</p>
           ) : (
