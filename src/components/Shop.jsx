@@ -4,7 +4,7 @@ import Product from './Product';
 
 import { useEffect, useState } from 'react';
 
-function Shop() {
+function Shop(props) {
   const [productsJSON, setProductsJSON] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -45,7 +45,7 @@ function Shop() {
 
   return (
     <>
-      <Header />
+      <Header count={props.count} />
       <div className='flex flex-col items-center justify-center w-3/4 text-center sm:justify-between'>
         <p className='mx-auto mt-6 text-4xl tracking-wide select-none text-silver-800 font-motto'>more products coming soon...</p>
         <div className="flex flex-row flex-wrap items-center justify-center gap-2 mt-6 ml-0 sm:ml-auto sm:w-full sm:mr-5 sm:justify-end font-display">
@@ -73,7 +73,7 @@ function Shop() {
             <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>loading...</p>
           ) : (
             filteredProducts.map((product) => (
-              <Product key={product.id} product={product} />
+              <Product key={product.id} product={product} onAdd={props.onAdd} />
             ))
           )}
         </div>

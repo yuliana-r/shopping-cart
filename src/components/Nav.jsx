@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function Nav() {
+function Nav(props) {
   const LINKS = [
     {
       id: 0,
@@ -25,7 +25,15 @@ function Nav() {
       {LINKS.map((link) => {
         return(
           <li key={link.id} className='m-2 text-base font-extrabold tracking-wider list-none font-display text-silver-900'>
-            <NavLink name={link.name} to={link.to} className={({isActive}) => isActive ? 'text-navy-500 border-b-2' : ''}>{link.name}</NavLink>
+            <NavLink name={link.name} to={link.to} className={({isActive}) => isActive ? 'text-navy-500 border-b-2 pb-1' : ''}>
+              {link.name === 'CART' ? (
+                <span>
+                  {link.name}<span className="float-right w-6 h-6 p-0.5 ml-2 text-sm font-semibold text-center align-bottom rounded-full bg-navy-500 text-silver-50">{props.count}</span>
+                </span>
+              ) : (
+                link.name
+              )}
+            </NavLink>
           </li>
         )
       })}

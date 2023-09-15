@@ -1,10 +1,10 @@
 import Header from './Header';
 import Footer from './Footer';
 
-function Cart() {
+function Cart(props) {
   return (
     <>
-      <Header />
+      <Header count={props.count} />
       <h1>Cart page!</h1>
       <Footer />
     </>
