@@ -7,31 +7,32 @@ import ErrorPage from './ErrorPage';
 
 const Router = () => {
 
-  const [count, setCount] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   console.log(`items in cart: ${cartItems}`);
+  // }, [cartItems])
 
-  }, [])
-
-  function add() {
-    console.log(count);
-    setCount(count => count + 1);
+  function add(product) {
+    setCartItems(cartItems => [...cartItems, product]);
+    //console.log(cartItems);
+    // console.log(`product added: ${product}`);
   }
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home count={count} />,
+      element: <Home cartItems={cartItems} />,
       errorElement: <ErrorPage />
     },
     {
       path: '/shop',
-      element: <Shop onAdd={add} count={count}/>,
+      element: <Shop onAdd={add} cartItems={cartItems}/>,
       errorElement: <ErrorPage />
     },
     {
       path: '/cart',
-      element: <Cart count={count} />,
+      element: <Cart cartItems={cartItems} />,
       errorElement: <ErrorPage />
     },
   ])

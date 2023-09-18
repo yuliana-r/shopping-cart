@@ -3,8 +3,9 @@ import Footer from './Footer';
 import Product from './Product';
 
 import { useEffect, useState } from 'react';
+//import PropTypes from 'prop-types';
 
-function Shop(props) {
+export default function Shop(props) {
   const [productsJSON, setProductsJSON] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -45,7 +46,7 @@ function Shop(props) {
 
   return (
     <>
-      <Header count={props.count} />
+      <Header cartItems={props.cartItems} />
       <div className='flex flex-col items-center justify-center w-3/4 text-center sm:justify-between'>
         <p className='mx-auto mt-6 text-4xl tracking-wide select-none text-silver-800 font-motto'>more products coming soon...</p>
         <div className="flex flex-row flex-wrap items-center justify-center gap-2 mt-6 ml-0 sm:ml-auto sm:w-full sm:mr-5 sm:justify-end font-display">
@@ -84,4 +85,4 @@ function Shop(props) {
   );
 }
 
-export default Shop;
+//export default Shop;

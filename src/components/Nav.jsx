@@ -28,7 +28,7 @@ function Nav(props) {
             <NavLink name={link.name} to={link.to} className={({isActive}) => isActive ? 'text-navy-500 border-b-2 pb-1' : ''}>
               {link.name === 'CART' ? (
                 <span>
-                  {link.name}<span className="float-right w-6 h-6 p-0.5 ml-2 text-sm font-semibold text-center align-bottom rounded-full bg-navy-500 text-silver-50">{props.count}</span>
+                  {link.name}<span className="float-right w-6 h-6 ml-1.5 text-[11px] font-semibold text-center align-bottom rounded-full bg-navy-500 text-silver-50">{props.cartItems.length}</span>
                 </span>
               ) : (
                 link.name

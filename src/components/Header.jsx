@@ -8,7 +8,7 @@ function Header(props) {
         <h1 className="text-4xl font-black text-navy-500 font-display">shop &apos;n&apos; roll</h1>
         <p className="text-4xl text-silver-800 font-motto">rollin&apos;, strollin&apos;, and shoppin&apos; away</p>
       </header>
-      <Nav count={props.count} />
+      <Nav cartItems={props.cartItems} />
     </div>
   )
 }
