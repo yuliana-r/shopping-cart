@@ -9,7 +9,7 @@ export default function Home(props) {
     <>
       <Header cartItems={props.cartItems} />
       <div className="mt-[240px] flex flex-col items-center justify-center w-full m-2 text-lg leading-7 text-justify select-none h-fit font-display bg-silver-50 text-black-950">
-        <div className="flex flex-row flex-wrap items-center justify-center  w-[min(90vw,900px)] m-6 xl:flex-nowrap">
+        <div className="flex flex-row flex-wrap items-center w-[min(90vw,900px)] justify-center m-6 xl:flex-nowrap">
           <p className="m-4">
                 At <span className="font-extrabold text-navy-500">shop &apos;n&apos; roll</span>, we&apos;ve 
                 crafted a unique online shopping experience that 
@@ -19,7 +19,7 @@ export default function Home(props) {
           <img src={chair} alt="white chair next to succulent and white mug" className="m-4 rounded shadow-2xl" />
         </div>
 
-        <div className="flex flex-row items-center justify-center w-7/12 m-8">
+        <div className="flex flex-row items-center justify-center w-[min(90vw,900px)] m-8">
           <p className="m-4">
                 We prioritize your shopping experience, making it as enjoyable and <span className="text-3xl font-semibold tracking-wide font-motto text-navy-500">stress-free </span> 
                 as possible. Our user-friendly website is designed to be easy to navigate, allowing you to 
@@ -28,7 +28,7 @@ export default function Home(props) {
           </p>
         </div>
             
-        <div className="flex flex-row flex-wrap items-center justify-center w-7/12 m-6 xl:flex-nowrap">
+        <div className="flex flex-row flex-wrap items-center justify-center w-[min(90vw,900px)] m-6 xl:flex-nowrap">
           <img src={kitchen} alt="kitchen countertop with recipe book, spatulas and chopping boards on it" className="m-4 rounded shadow-2xl" />
           <p className="m-4">
                 We understand that everyone&apos;s tastes and preferences are as diverse as the items 
@@ -37,7 +37,7 @@ export default function Home(props) {
           </p>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-7/12 m-8">
+        <div className="flex flex-row items-center justify-center w-[min(90vw,900px)] m-8">
           <p className="m-4">
                 We encourage you to roll with us, explore our diverse selection, and stroll through our virtual aisles at <span className="text-3xl font-semibold tracking-wide font-motto text-navy-500">your own pace</span>.  
           </p>
