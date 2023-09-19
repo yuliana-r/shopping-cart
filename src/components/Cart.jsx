@@ -1,10 +1,12 @@
 import Header from './Header';
 import Footer from './Footer';
 import CartItem from './CartItem';
+import PropTypes from 'prop-types';
 
 export default function Cart(props) {
 
   const items = props.cartItems;
+  const uniqueItemIds = Array.from(new Set(items.map((item) => item.id)));
 
   function calculateTotalPerItem(item, qty) {
     return item.price * qty;
@@ -14,11 +16,7 @@ export default function Cart(props) {
     return cartItems.reduce((total, item) => total + item.price, 0);
   }
 
-  const uniqueItemIds = Array.from(new Set(items.map((item) => item.id)));
-
   const totalPricePerCart = calculateTotalPerCart(items);
-
-  
 
   return (
     <>
@@ -46,6 +44,7 @@ export default function Cart(props) {
                 const currentItem = items.find((item) => item.id === itemId);
                 return(
                   <CartItem 
+                    key={itemId}
                     item={currentItem} 
                     totalPricePerItem={totalPricePerItem} 
                     qty={qty}
@@ -67,18 +66,19 @@ export default function Cart(props) {
                 <span className="hidden group-hover:inline">THIS DOES NOTHING</span>
               </button>
             </div>
-
-            
           </>
         ) : (
           <p className='p-8 m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>your cart is empty!</p> 
         )}
       </div>
-      
-      
+
       <Footer />
     </>
   )
 }
 
-
+Cart.propTypes = {
+  cartItems: PropTypes.array,
+  removeItemsFromCart: PropTypes.func,
+  emptyCart: PropTypes.func
+}
