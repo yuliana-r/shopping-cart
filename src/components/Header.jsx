@@ -1,6 +1,7 @@
 import Nav from './Nav';
+import PropTypes from 'prop-types';
 
-function Header(props) {
+export default function Header(props) {
   return(
     <div className="fixed overflow-hidden top-0 flex flex-col items-center justify-center w-full min-w-[300px] pb-0.5 border-b-2 border-solid shadow-lg select-none bg-silver-50 border-silver-300">
       <header className="flex flex-col items-center justify-center gap-2 p-3 mb-2 text-center">
@@ -13,4 +14,6 @@ function Header(props) {
   )
 }
 
-export default Header;
+Header.propTypes = {
+  cartItems: PropTypes.array
+}
