@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function Nav(props) {
+export default function Nav(props) {
   const LINKS = [
     {
       id: 0,
@@ -42,13 +42,5 @@ function Nav(props) {
 }
 
 Nav.propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      to: PropTypes.string,
-      name: PropTypes.string
-    })
-  )
+  cartItems: PropTypes.array
 }
-
-export default Nav;
