@@ -21,7 +21,7 @@ export default function Cart(props) {
   return (
     <>
       <Header cartItems={props.cartItems} />
-      <div className='mt-[250px] flex flex-col items-center justify-center w-7/12 min-w-[350px] font-display'>
+      <div className='mt-[250px] flex flex-col items-center justify-center  w-[min(90vw,900px)] min-w-[350px] font-display'>
         {items.length > 0 ? (
           <>
             <div className='flex items-center py-4 justify-between sm:w-full w-[320px] gap-2 mb-2 text-lg font-bold text-black-800'>
