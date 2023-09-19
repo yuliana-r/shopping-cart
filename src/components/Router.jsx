@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useState } from 'react';
 import Home from './Home';
-import Shop from './Shop';
-import Cart from './Cart';
+import Shop from './Shop/Shop';
+import Cart from './Cart/Cart';
 import ErrorPage from './ErrorPage';
 
 const Router = () => {

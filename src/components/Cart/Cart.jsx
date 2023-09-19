@@ -1,5 +1,5 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer';
 import CartItem from './CartItem';
 import PropTypes from 'prop-types';
 

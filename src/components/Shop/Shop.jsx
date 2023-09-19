@@ -1,5 +1,5 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer';
 import Product from './Product';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -46,7 +46,7 @@ export default function Shop(props) {
   return (
     <>
       <Header cartItems={props.cartItems} />
-      <div className='mt-[200px] flex flex-col items-center justify-center w-3/4 text-center sm:justify-between'>
+      <div className='mt-[250px] flex flex-col items-center justify-center w-3/4 text-center sm:justify-between'>
         <div className="flex flex-row flex-wrap items-center justify-center gap-2 mt-6 ml-0 sm:ml-auto sm:w-full sm:mr-5 sm:justify-end font-display">
           <p className='text-base font-bold text-yellow-500'>Category:</p>
           <div>

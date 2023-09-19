@@ -1,4 +1,4 @@
-import Header from './Header';
+import Header from './Header/Header';
 import Footer from './Footer';
 import chair from '../assets/home/chair.jpg'
 import kitchen from '../assets/home/kitchen.jpg'
