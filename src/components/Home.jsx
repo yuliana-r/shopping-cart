@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
-import chair from '../assets/chair.jpg'
-import kitchen from '../assets/kitchen.jpg'
+import chair from '../assets/home/chair.jpg'
+import kitchen from '../assets/home/kitchen.jpg'
 import PropTypes from 'prop-types';
 
 export default function Home(props) {

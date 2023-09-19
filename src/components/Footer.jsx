@@ -1,8 +1,8 @@
-import instagram from '../assets/instagram.png';
-import facebook from '../assets/facebook.png';
-import youtube from '../assets/youtube.png';
-import gmail from '../assets/gmail.png';
-import tiktok from '../assets/tiktok.png';
+import instagram from '../assets/footer/instagram.png';
+import facebook from '../assets/footer/facebook.png';
+import youtube from '../assets/footer/youtube.png';
+import gmail from '../assets/footer/gmail.png';
+import tiktok from '../assets/footer/tiktok.png';
 
 function Footer() {
   return(
