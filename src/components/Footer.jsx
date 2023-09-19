@@ -6,7 +6,7 @@ import tiktok from '../assets/footer/tiktok.png';
 
 function Footer() {
   return(
-    <footer className="flex flex-col items-center w-full border-t-2 border-solid bg-navy-700 h-fit font-display text-silver-200 border-navy-500">
+    <footer className="flex flex-col items-center w-full border-t-2 border-solid bg-navy-600 h-fit font-display text-silver-200 border-navy-500">
       <div className="flex flex-row flex-wrap items-start justify-center gap-8 pt-8 pb-2 ">
         <div className="m-4 w-52">
           <h4 className="mb-4 font-bold tracking-wider select-none">COMPANY</h4>

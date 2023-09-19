@@ -7,7 +7,8 @@ This project primarily demonstrates use of React client-side routing, basic test
 
 ## Preview
 
-<!-- [![Shopping Cart App](./src/assets/demo.png)](https://shopping-cart-yuliana-r.netlify.app/) -->
+[![Shopping Cart App](./src/assets/demo1.png)](https://shopping-cart-yuliana-r.netlify.app/)
+[![Shopping Cart App](./src/assets/demo2.png)](https://shopping-cart-yuliana-r.netlify.app/)
 
 ## Media & assets credits:
 
