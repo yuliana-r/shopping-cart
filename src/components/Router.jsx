@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Home from './Home';
 import Shop from './Shop';
 import Cart from './Cart';
@@ -9,14 +9,9 @@ const Router = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  // useEffect(() => {
-  //   console.log(`items in cart: ${cartItems}`);
-  // }, [cartItems])
-
   function add(product) {
     setCartItems(cartItems => [...cartItems, product]);
-    //console.log(cartItems);
-    // console.log(`product added: ${product}`);
+
   }
 
   const router = createBrowserRouter([
