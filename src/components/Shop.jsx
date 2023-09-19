@@ -1,9 +1,8 @@
 import Header from './Header';
 import Footer from './Footer';
 import Product from './Product';
-
 import { useEffect, useState } from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Shop(props) {
   const [productsJSON, setProductsJSON] = useState([]);
@@ -84,4 +83,7 @@ export default function Shop(props) {
   );
 }
 
-//export default Shop;
+Shop.propTypes = {
+  cartItems: PropTypes.array,
+  onAdd: PropTypes.func
+}
