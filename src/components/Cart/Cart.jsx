@@ -21,7 +21,7 @@ export default function Cart(props) {
   return (
     <>
       <Header cartItems={props.cartItems} />
-      <div className='mt-[240px] flex flex-col h-full items-center justify-center w-[min(90vw,900px)] font-display'>
+      <main className='mt-[240px] flex flex-col h-full items-center justify-center w-[min(90vw,900px)] font-display'>
         {items.length > 0 ? (
           <>
             <div className='flex items-center py-4 justify-between sm:w-full w-[320px] gap-2 mb-2 text-lg font-bold text-black-800'>
@@ -70,7 +70,7 @@ export default function Cart(props) {
         ) : (
           <p className='p-8 m-auto mt-6 text-4xl select-none text-silver-800 font-motto'>your cart is empty!</p> 
         )}
-      </div>
+      </main>
 
       <Footer />
     </>
