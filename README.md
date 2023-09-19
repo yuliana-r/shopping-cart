@@ -1,6 +1,10 @@
 # Shopping Cart App
 ## Introduction 
 
+This project is a mock front-end interface for an online store with ability to browse, add and remove items from the shopping cart. 
+
+This project primarily demonstrates use of React client-side routing, basic testing of UI elements (using Vitest and React Testing Library) and Tailwind CSS.
+
 ## Preview
 
 <!-- [![Shopping Cart App](./src/assets/demo.png)](https://shopping-cart-yuliana-r.netlify.app/) -->
