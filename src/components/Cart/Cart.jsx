@@ -53,7 +53,7 @@ export default function Cart(props) {
                 )
               })
             }
-            <h1 className='self-center pr-2 my-6 text-lg font-semibold tracking-wide sm:self-end text-black-950'>TOTAL (inc. VAT): £{totalPricePerCart.toFixed(2)}</h1>
+            <h1 className='self-center pr-2 my-6 text-lg font-semibold tracking-wide sm:self-end text-black-950'>TOTAL <span className='font-normal'>(inc. VAT)</span>: £{totalPricePerCart.toFixed(2)}</h1>
 
             <div className='flex flex-wrap justify-center w-full sm:justify-between sm:flex-nowrap'>
               <button onClick={props.emptyCart}
@@ -68,7 +68,7 @@ export default function Cart(props) {
             </div>
           </>
         ) : (
-          <p className='p-8 m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>your cart is empty!</p> 
+          <p className='p-8 m-auto mt-6 text-4xl select-none text-silver-800 font-motto'>your cart is empty!</p> 
         )}
       </div>
 
