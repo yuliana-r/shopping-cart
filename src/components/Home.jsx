@@ -8,8 +8,8 @@ export default function Home(props) {
   return(
     <>
       <Header cartItems={props.cartItems} />
-      <div className="mt-[240px] flex flex-col items-center justify-center w-full m-2 text-lg leading-7 text-justify select-none h-fit font-display bg-silver-50 text-black-950">
-        <div className="flex flex-row flex-wrap items-center w-[min(90vw,900px)] justify-center m-6 xl:flex-nowrap">
+      <div className="mt-[240px] xs:mt-[200px] flex flex-col items-center justify-center w-full m-2 text-lg leading-7 text-justify select-none h-fit font-display bg-silver-50 text-black-950">
+        <div className="flex flex-row flex-wrap items-center justify-center w-[min(90vw,900px)] m-6 xl:flex-nowrap">
           <p className="m-4">
                 At <span className="font-extrabold text-navy-500">shop &apos;n&apos; roll</span>, we&apos;ve 
                 crafted a unique online shopping experience that 
