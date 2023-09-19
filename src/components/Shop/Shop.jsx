@@ -46,7 +46,7 @@ export default function Shop(props) {
   return (
     <>
       <Header cartItems={props.cartItems} />
-      <div className='mt-[240px] xs:mt-[200px] flex flex-col items-center justify-center w-[min(90vw,900px)] h-fit text-center sm:justify-between'>
+      <div className='mt-[240px] flex flex-col items-center justify-center w-[min(90vw,900px)] h-fit text-center sm:justify-between'>
         <div className="flex flex-row flex-wrap items-center justify-center gap-2 mt-6 ml-0 sm:ml-auto sm:w-full sm:mr-5 sm:justify-end font-display">
           <p className='text-base font-bold text-yellow-500'>Category:</p>
           <div>
