@@ -1,8 +1,8 @@
 import Header from '../Header/Header';
 import Footer from '../Footer';
 import Product from './Product';
-import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 export default function Shop(props) {
   const [productsJSON, setProductsJSON] = useState([]);
@@ -72,7 +72,10 @@ export default function Shop(props) {
             <p className='m-auto mt-6 text-5xl select-none text-silver-800 font-motto'>loading...</p>
           ) : (
             filteredProducts.map((product) => (
-              <Product key={product.id} product={product} onAdd={props.onAdd} />
+              <Product 
+                key={product.id} 
+                product={product} 
+                onAdd={props.onAdd} />
             ))
           )}
         </div>

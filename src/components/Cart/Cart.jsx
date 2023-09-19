@@ -24,7 +24,7 @@ export default function Cart(props) {
       <div className='mt-[250px] flex flex-col items-center justify-center w-7/12 min-w-[350px] font-display'>
         {items.length > 0 ? (
           <>
-            <div className='flex items-center justify-between sm:w-full w-[320px] gap-2 mb-2 text-lg font-bold text-black-800'>
+            <div className='flex items-center py-4 justify-between sm:w-full w-[320px] gap-2 mb-2 text-lg font-bold text-black-800'>
               <p className='w-5/6'>Item</p>
               <p className='text-center w-[75px]'>Qty</p>
               <p className='text-right pr-4 w-[100px]'>Total</p>
@@ -55,9 +55,9 @@ export default function Cart(props) {
             }
             <h1 className='self-center pr-2 my-6 text-lg font-semibold tracking-wide sm:self-end text-black-950'>TOTAL (inc. VAT): £{totalPricePerCart.toFixed(2)}</h1>
 
-            <div className='flex justify-between w-full'>
+            <div className='flex flex-wrap justify-center w-full sm:justify-between sm:flex-nowrap'>
               <button onClick={props.emptyCart}
-                className="self-center w-56 px-5 py-1 mb-8 text-base font-semibold bg-yellow-500 border border-yellow-700 border-solid rounded text-black-50 hover:scale-105 group">
+                className="self-center w-48 px-5 py-1 mb-8 mr-0 text-base font-semibold bg-yellow-500 border border-yellow-700 border-solid rounded sm:mr-4 text-black-50 hover:scale-105 group">
               EMPTY CART
               </button>
 

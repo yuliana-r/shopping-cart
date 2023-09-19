@@ -11,13 +11,10 @@ const Router = () => {
 
   function add(product) {
     setCartItems(cartItems => [...cartItems, product]);
-
   }
 
   function emptyCart() {
     setCartItems([]);
-    console.log('cart emptied');
-    console.log('current cart:' + cartItems);
   }
 
   function removeItemsFromCart(itemIdToRemove) {
@@ -29,17 +26,23 @@ const Router = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home cartItems={cartItems} />,
+      element: <Home 
+        cartItems={cartItems} />,
       errorElement: <ErrorPage />
     },
     {
       path: '/shop',
-      element: <Shop onAdd={add} cartItems={cartItems}/>,
+      element: <Shop 
+        onAdd={add} 
+        cartItems={cartItems}/>,
       errorElement: <ErrorPage />
     },
     {
       path: '/cart',
-      element: <Cart cartItems={cartItems} emptyCart={emptyCart} removeItemsFromCart={removeItemsFromCart} />,
+      element: <Cart 
+        cartItems={cartItems} 
+        emptyCart={emptyCart} 
+        removeItemsFromCart={removeItemsFromCart} />,
       errorElement: <ErrorPage />
     },
   ])
