@@ -2,8 +2,9 @@ import Header from './Header';
 import Footer from './Footer';
 import chair from '../assets/chair.jpg'
 import kitchen from '../assets/kitchen.jpg'
+import PropTypes from 'prop-types';
 
-function Home(props) {
+export default function Home(props) {
   return(
     <>
       <Header cartItems={props.cartItems} />
@@ -47,4 +48,6 @@ function Home(props) {
   )
 }
 
-export default Home;
+Home.propTypes = {
+  cartItems: PropTypes.array
+}
