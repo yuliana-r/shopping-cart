@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function CartItem(props) {
   return(
     <div className='flex items-center h-[110px] justify-between sm:w-full w-[320px] gap-2 mb-4 border border-solid rounded shadow-md border-silver-400 font-display'>
@@ -22,6 +24,12 @@ export default function CartItem(props) {
         <i className="fa-solid fa-xmark"></i>
       </button>
     </div>
-      
   )
+}
+
+CartItem.propTypes = {
+  item: PropTypes.object,
+  qty: PropTypes.number,
+  totalPricePerItem: PropTypes.number,
+  removeItemsFromCart: PropTypes.func
 }
