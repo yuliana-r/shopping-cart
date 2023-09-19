@@ -14,6 +14,18 @@ const Router = () => {
 
   }
 
+  function emptyCart() {
+    setCartItems([]);
+    console.log('cart emptied');
+    console.log('current cart:' + cartItems);
+  }
+
+  function removeItemsFromCart(itemIdToRemove) {
+    const updatedCart = cartItems.filter((item) => item.id !== itemIdToRemove);
+    setCartItems(updatedCart);
+  }
+
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -27,7 +39,7 @@ const Router = () => {
     },
     {
       path: '/cart',
-      element: <Cart cartItems={cartItems} />,
+      element: <Cart cartItems={cartItems} emptyCart={emptyCart} removeItemsFromCart={removeItemsFromCart} />,
       errorElement: <ErrorPage />
     },
   ])
