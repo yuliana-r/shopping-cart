@@ -3,7 +3,7 @@
 
 This project is a mock front-end interface for an online store with ability to browse, add and remove items from the shopping cart. 
 
-This project primarily demonstrates use of React client-side routing, basic testing of UI elements (using Vitest and React Testing Library) and Tailwind CSS.
+This project primarily demonstrates use of React client-side routing, React data fetching from [Fake Store API](https://fakestoreapi.com/), basic testing of UI elements (using Vitest and React Testing Library) and Tailwind CSS.
 
 ## Preview
 
