@@ -3,7 +3,7 @@
 
 This project is a mock front-end interface for an online store with ability to browse, add and remove items from the shopping cart. 
 
-This project primarily demonstrates use of React client-side routing, useContext hook, React data fetching from [Fake Store API](https://fakestoreapi.com/) and Tailwind CSS.
+This project primarily demonstrates use of React client-side routing, useContext and useMemo hooks, React data fetching from [Fake Store API](https://fakestoreapi.com/) and Tailwind CSS.
 
 ## Preview
 

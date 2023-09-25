@@ -1,7 +1,7 @@
 import Header from '../Header/Header';
 import Footer from '../Footer';
 import CartItem from './CartItem';
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { ShopContext } from '../Router';
 
 export default function Cart() {
@@ -14,11 +14,11 @@ export default function Cart() {
     return item.price * qty;
   }
 
-  function calculateTotalPerCart(cartItems) {
-    return cartItems.reduce((total, item) => total + item.price, 0);
-  }
-
-  const totalPricePerCart = calculateTotalPerCart(cartItems);
+  const totalPrice = useMemo(() => {
+    return cartItems.reduce(
+      (total, item) => total + item.price, 0
+    );
+  }, [cartItems]);
 
   return (
     <>
@@ -54,7 +54,7 @@ export default function Cart() {
                 )
               })
             }
-            <h1 className='self-center pr-2 my-6 text-lg font-semibold tracking-wide sm:self-end text-black-950'>TOTAL <span className='font-normal'>(inc. VAT)</span>: £{totalPricePerCart.toFixed(2)}</h1>
+            <h1 className='self-center pr-2 my-6 text-lg font-semibold tracking-wide sm:self-end text-black-950'>TOTAL <span className='font-normal'>(inc. VAT)</span>: £{totalPrice.toFixed(2)}</h1>
 
             <div className='flex flex-wrap justify-center w-full gap-2 sm:justify-between sm:flex-nowrap'>
               <button onClick={emptyCart}
