@@ -24,7 +24,7 @@ export default function Nav(props) {
     <nav className='flex sm:gap-20'>
       {LINKS.map((link) => {
         return(
-          <li key={link.id} className='m-2 text-base font-extrabold tracking-wider list-none font-display text-silver-900'>
+          <li key={link.id} className='m-2 text-base font-extrabold tracking-wider list-none font-display text-silver-900 hover:scale-105'>
             <NavLink 
               name={link.name} 
               to={link.to} 
