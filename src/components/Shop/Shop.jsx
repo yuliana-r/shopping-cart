@@ -1,16 +1,18 @@
 import Header from '../Header/Header';
 import Footer from '../Footer';
 import Product from './Product';
-import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { ShopContext } from '../Router';
 
-export default function Shop(props) {
+export default function Shop() {
   const [productsJSON, setProductsJSON] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const [selectedCategory, setSelectedCategory] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const { cartItems } = useContext(ShopContext);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products/', { mode: 'cors' })
@@ -45,7 +47,7 @@ export default function Shop(props) {
 
   return (
     <>
-      <Header cartItems={props.cartItems} />
+      <Header cartItems={cartItems} />
       <main className='mt-[240px] flex flex-col items-center justify-center w-[min(90vw,900px)] h-fit text-center sm:justify-between'>
         <div className="flex flex-row flex-wrap items-center justify-center gap-2 mt-6 ml-0 sm:ml-auto sm:w-full sm:mr-5 sm:justify-end font-display">
           <p className='text-base font-bold text-yellow-500'>Category:</p>
@@ -74,8 +76,7 @@ export default function Shop(props) {
             filteredProducts.map((product) => (
               <Product 
                 key={product.id} 
-                product={product} 
-                onAdd={props.onAdd} />
+                product={product} />
             ))
           )}
         </div>
@@ -84,9 +85,4 @@ export default function Shop(props) {
       <Footer />
     </>
   );
-}
-
-Shop.propTypes = {
-  cartItems: PropTypes.array,
-  onAdd: PropTypes.func
 }

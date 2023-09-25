@@ -1,7 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { ShopContext } from '../Router';
 
-export default function Nav(props) {
+export default function Nav() {
+
+  const { cartItems } = useContext(ShopContext);
+
   const LINKS = [
     {
       id: 0,
@@ -31,7 +35,7 @@ export default function Nav(props) {
               className={({isActive}) => isActive ? 'text-navy-500 border-b-2 pb-1' : ''}>
               {link.name === 'CART' ? (
                 <span>
-                  {link.name}<span className="float-right w-6 h-6 ml-1.5 text-[11px] font-semibold text-center align-bottom rounded-full bg-navy-500 text-silver-50">{props.cartItems.length}</span>
+                  {link.name}<span className="float-right w-6 h-6 ml-1.5 text-[11px] font-semibold text-center align-bottom rounded-full bg-navy-500 text-silver-50">{cartItems.length}</span>
                 </span>
               ) : (
                 link.name
@@ -42,8 +46,4 @@ export default function Nav(props) {
       })}
     </nav>
   )
-}
-
-Nav.propTypes = {
-  cartItems: PropTypes.array
 }

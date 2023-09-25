@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { ShopContext } from '../Router';
 
 function Product(props) {
 
-  function handleAddClick() {
-    props.onAdd(props.product);
-  }
+  const { addToCart } = useContext(ShopContext);
 
   return(
     <div className='flex flex-col items-center justify-between w-56 mb-8 bg-white border-2 border-solid rounded shadow-md border-silver-400 h-96 font-display'>
@@ -22,7 +22,7 @@ function Product(props) {
         </div>
       </div>
 
-      <button onClick={handleAddClick}
+      <button onClick={() => addToCart(props.product)}
         className='px-6 py-1 mb-4 text-sm font-semibold border border-solid rounded bg-navy-500 border-navy-700 text-black-50 hover:scale-105'>
         <i className="px-2 fa-solid fa-cart-shopping"></i>ADD</button>
     </div>
@@ -30,8 +30,7 @@ function Product(props) {
 }
 
 Product.propTypes = {
-  product: PropTypes.object,
-  onAdd: PropTypes.func
+  product: PropTypes.object
 }
 
 export default Product;

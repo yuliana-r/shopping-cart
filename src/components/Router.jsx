@@ -1,15 +1,22 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import Home from './Home';
 import Shop from './Shop/Shop';
 import Cart from './Cart/Cart';
 import ErrorPage from './ErrorPage';
 
+export const ShopContext = createContext({
+  cartItems: [],
+  addToCart: () => {},
+  emptyCart: () => {},
+  removeItemsFromCart: () => {}
+});
+
 const Router = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  function add(product) {
+  function addToCart(product) {
     setCartItems(cartItems => [...cartItems, product]);
   }
 
@@ -22,32 +29,29 @@ const Router = () => {
     setCartItems(updatedCart);
   }
 
-
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home 
-        cartItems={cartItems} />,
+      element: <Home />,
       errorElement: <ErrorPage />
     },
     {
       path: '/shop',
-      element: <Shop 
-        onAdd={add} 
-        cartItems={cartItems}/>,
+      element: <Shop />,
       errorElement: <ErrorPage />
     },
     {
       path: '/cart',
-      element: <Cart 
-        cartItems={cartItems} 
-        emptyCart={emptyCart} 
-        removeItemsFromCart={removeItemsFromCart} />,
+      element: <Cart />,
       errorElement: <ErrorPage />
     },
   ])
 
-  return <RouterProvider router={router} />;
+  return (
+    <ShopContext.Provider value={{ cartItems, addToCart, emptyCart, removeItemsFromCart }}>
+      <RouterProvider router={router} />
+    </ShopContext.Provider>
+  );
 }
 
 export default Router;

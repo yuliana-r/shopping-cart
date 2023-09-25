@@ -1,12 +1,14 @@
 import Header from '../Header/Header';
 import Footer from '../Footer';
 import CartItem from './CartItem';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { ShopContext } from '../Router';
 
-export default function Cart(props) {
+export default function Cart() {
 
-  const items = props.cartItems;
-  const uniqueItemIds = Array.from(new Set(items.map((item) => item.id)));
+  const { cartItems, emptyCart } = useContext(ShopContext);
+
+  const uniqueItemIds = Array.from(new Set(cartItems.map((item) => item.id)));
 
   function calculateTotalPerItem(item, qty) {
     return item.price * qty;
@@ -16,13 +18,13 @@ export default function Cart(props) {
     return cartItems.reduce((total, item) => total + item.price, 0);
   }
 
-  const totalPricePerCart = calculateTotalPerCart(items);
+  const totalPricePerCart = calculateTotalPerCart(cartItems);
 
   return (
     <>
-      <Header cartItems={props.cartItems} />
+      <Header cartItems={cartItems} />
       <main className='mt-[240px] flex flex-col h-full items-center justify-center w-[min(90vw,900px)] font-display'>
-        {items.length > 0 ? (
+        {cartItems.length > 0 ? (
           <>
             <div className='flex items-center py-4 justify-between sm:w-full w-[320px] gap-2 mb-2 text-lg font-bold text-black-800'>
               <p className='w-5/6'>Item</p>
@@ -34,30 +36,29 @@ export default function Cart(props) {
             </div>
             {
               uniqueItemIds.map((itemId) => {
-                const itemsWithId = items.filter((item) => item.id === itemId);
+                const itemsWithId = cartItems.filter((item) => item.id === itemId);
                 const qty = itemsWithId.length;
                 const totalPricePerItem = calculateTotalPerItem(
                   itemsWithId[0],
                   qty
                 );
 
-                const currentItem = items.find((item) => item.id === itemId);
+                const currentItem = cartItems.find((item) => item.id === itemId);
                 return(
                   <CartItem 
                     key={itemId}
                     item={currentItem} 
                     totalPricePerItem={totalPricePerItem} 
                     qty={qty}
-                    removeItemsFromCart={props.removeItemsFromCart}
                   />
                 )
               })
             }
             <h1 className='self-center pr-2 my-6 text-lg font-semibold tracking-wide sm:self-end text-black-950'>TOTAL <span className='font-normal'>(inc. VAT)</span>: £{totalPricePerCart.toFixed(2)}</h1>
 
-            <div className='flex flex-wrap justify-center w-full sm:justify-between sm:flex-nowrap'>
-              <button onClick={props.emptyCart}
-                className="self-center w-48 px-5 py-1 mb-8 mr-0 text-base font-semibold bg-yellow-500 border border-yellow-700 border-solid rounded sm:mr-4 text-black-50 hover:scale-105 group">
+            <div className='flex flex-wrap justify-center w-full gap-2 sm:justify-between sm:flex-nowrap'>
+              <button onClick={emptyCart}
+                className="self-center w-48 px-5 py-1 mb-8 mr-0 text-base font-semibold bg-yellow-500 border border-yellow-700 border-solid rounded text-black-50 hover:scale-105 group">
               EMPTY CART
               </button>
 
@@ -75,10 +76,4 @@ export default function Cart(props) {
       <Footer />
     </>
   )
-}
-
-Cart.propTypes = {
-  cartItems: PropTypes.array,
-  removeItemsFromCart: PropTypes.func,
-  emptyCart: PropTypes.func
 }
