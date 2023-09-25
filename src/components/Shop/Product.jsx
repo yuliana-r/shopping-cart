@@ -7,7 +7,7 @@ function Product(props) {
   }
 
   return(
-    <div className='flex flex-col items-center justify-between w-56 mb-8 border-2 border-solid rounded shadow-md border-silver-400 h-96 font-display'>
+    <div className='flex flex-col items-center justify-between w-56 mb-8 bg-white border-2 border-solid rounded shadow-md border-silver-400 h-96 font-display'>
       <div className='flex flex-col items-center justify-start mt-4 text-center'>
         <div className='overflow-hidden w-44 h-44'>
           <img src={props.product.image} alt="" className='self-start object-contain w-full h-full' />
